@@ -1,1 +1,25 @@
-{"name":"razz-automation","version":"0.1.0","private":true,"type":"module","scripts":{"dev":"node server.mjs","start":"node server.mjs","test":"node --test","check":"node --check app.js && node --check core.js && node --check server.mjs"},"engines":{"node":">=20"}}
+{
+  "name": "razz-automation",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "test": "node --test",
+    "check": "node --check app.js && node --check core.js && node --check server.mjs && node --check cloud.js && node --check cloud-store.js",
+    "predev": "node build.mjs",
+    "prestart": "node build.mjs",
+    "build": "node build.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.117.2",
+    "esbuild": "0.25.0"
+  },
+  "devDependencies": {
+    "jsdom": "26.1.0"
+  }
+}
